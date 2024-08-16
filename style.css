@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "VT323", monospace;
+    list-style: none;
+}
+body, html{
+    background-color: #262525;
+    height: 2000px;
+    color: #d8fa30;
+}
+canvas{
+    position: fixed;
+    z-index: 2;
+    pointer-events: none; 
+}
+
+section{
+    position: relative;
+    /* border: 1px solid red; */
+    padding: 10vh 2vw; /* 위아래 패딩은 고정이고, 좌우패딩은 브라우저 너비에 따라 변함 */
+    height: 100vh;
+    width: 100vw;
+}
+.projects{
+    width: 100%; height: 100%;
+    /* border: 1px solid green; */
+}
+.projects ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%; height: 100%;
+    justify-content: space-between;
+}
+.projects ul li{
+    position: relative;
+    border-bottom: 1px solid #dafa3054;
+    cursor: pointer;
+    font-size: 6vw; /* 디바이스 너비에 따라 변함 */
+    font-weight: 400;
+}
+/* 해당 이미지는 캔버스에 그리기 위한 참조이므로 브라우저 화면에서 숨김 */
+.project-image{
+    opacity: 0;
+    position: absolute;
+    top: -100%;
+    pointer-events: none;
+    user-select: none;
+}
+
